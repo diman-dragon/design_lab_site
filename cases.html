@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проекты | Design Lab AI</title>
+<meta name="description" content="Дизайн-студия будущего. Создаем интеллектуальные интерфейсы для LegalTech и FinTech.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicons/favicon-cases.svg">
+<link rel="preload" href="assets/css/style.css" as="style">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* Стили для модальных окон */
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+.modal-body {
+    padding: 0;
+}
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Белая иконка закрытия */
+    opacity: 1;
+}
+.img-clickable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    display: block; /* Важно для контроля размеров */
+    overflow: hidden; /* Обрезка, если изображение больше */
+}
+.img-clickable:hover {
+    transform: scale(1.01);
+}
+
+/* Добавляем класс для изображений в кейсах, чтобы контролировать высоту */
+.case-image {
+    max-height: 400px; /* Задаем максимальную высоту */
+    width: 100%; /* Ширина по контейнеру */
+    object-fit: cover; /* Обрезать изображение, чтобы оно поместилось */
+}
+</style>
+</head>
+<body id="проекты">
+
+<header class="sticky-top">
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center logo-content" href="index.html">
+            <img src="assets/img/logo.png" alt="Design Lab Logo" class="logo-image">
+            <div class="logo-text d-none d-sm-block">
+                <div class="line-1">Design Lab</div>
+                <div class="line-2">for Data Law Project</div>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">
+                        <i class="fas fa-home"></i> Главная
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about.html">
+                        <i class="fas fa-building"></i> О студии
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="services.html">
+                        <i class="fas fa-tools"></i> Услуги
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="cases.html">
+                        <i class="fas fa-folder-open"></i> Проекты
+                    </a>
+                </li>
+                <li class="nav-item me-lg-3">
+                    <a class="nav-link " href="contact.html">
+                        <i class="fas fa-envelope"></i> Контакты
+                    </a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a href="contact.html" class="btn btn-primary btn-sm rounded-pill px-4">
+                        <i class="fas fa-bolt me-2"></i> Заказать
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+<div class="container main-container">
+    <div class="row pt-3">
+        <div class="col-lg-10" data-aos="fade-right">
+            <h1 class="display-5 fw-bold mb-4">Наши проекты<br>Где дизайн служит <span class="gradient-text">большой цели</span></h1>
+            <p class="lead text-muted">Мы не делаем просто красивые интерфейсы. Мы делаем инструменты, которые меняют правила игры.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5 pt-4 g-4 border-top border-secondary-subtle">
+        <div class="col-12 mb-3" data-aos="fade-up">
+            <h2 class="h2 fw-bold text-white mb-2">Data Law</h2>
+            <h3 class="h5 fw-normal text-primary mb-4">Технологии для защиты прав человека</h3>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead text-muted">Конечная цель проекта — изменить подход к международной правозащите.</p>
+            <p class="text-muted">Это не очередная база данных и не набор сервисов. Это экосистема, в которой разрозненная информация из открытых источников, судебных реестров, СМИ и документов превращается в проверенную, связную и юридически пригодную картину мира.</p>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-tools text-primary me-2"></i> Что мы строим:</h6>
+            <ul class="list-unstyled text-muted project-list">
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Интеллектуальный аналитический слой, который сам видит связи между людьми, организациями, решениями и событиями</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Автоматическое выявление противоречий, нарушений процедур и логических разрывов</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Генеративный дизайн и data science внутри архитектуры: система сама подсказывает недостающие элементы, прогнозирует риски и предлагает правовые стратегии</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Платформа доверия, доступная любому человеку, журналисту, адвокату или правозащитной организации</li>
+            </ul>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-bullseye text-primary me-2"></i> Конечная цель:</h6>
+            <p class="text-muted">Сделать так, чтобы, когда нужна правда — открывали Data Law. И получали её. Быстро. Объективно. С доказательствами.</p>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal1" aria-label="Открыть изображение Data Law в полном размере">
+                <img src="assets/img/data_law_dashboard1.png" alt="Скриншот аналитической панели Data Law" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
+            </a>
+        </div>
+    </div>
+    
+    <hr class="my-5 border-secondary-subtle">
+    
+    <div class="row pt-4 g-4">
+        <div class="col-12 mb-3" data-aos="fade-up">
+            <h2 class="h2 fw-bold text-white mb-2">LinguaDesk</h2>
+            <h3 class="h5 fw-normal text-primary mb-4">Образовательный и языковой проект</h3>
+        </div>
+        
+        <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-muted">Система изучения языков по карточкам — но по-настоящему умная и красивая.</p>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Что сделали:</h6>
+            <ul class="list-unstyled text-muted project-list">
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Логотип и полная айдентика</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Система авторских иллюстраций и анимаций</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Интерфейс веб-платформы и мобильных приложений</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> 10+ языков с родным произношением, аудио, видео и контекстными примерами</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Алгоритм повторений, который реально работает</li>
+            </ul>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-trophy text-primary me-2"></i> Результат:</h6>
+            <p class="text-muted">Люди учат языки не потому что «надо», а потому что не могут оторваться. И да — впервые за историю карточек кто-то сказал: «Красиво сделано».</p>
+        </div>
+        
+        <div class="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal2" aria-label="Открыть изображение LinguaDesk в полном размере">
+                <img src="assets/img/linguadesk2.png" alt="Скриншот режима изучения LinguaDesk" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
+            </a>
+        </div>
+    </div>
+    
+    <hr class="my-5 border-secondary-subtle">
+    
+    <div class="row pt-4 g-4">
+        <div class="col-12 mb-3" data-aos="fade-up">
+            <h2 class="h2 fw-bold text-white mb-2">Генеративный брендинг (Creativico)</h2>
+            <h3 class="h5 fw-normal text-primary mb-4">Динамический логотип и проспекты, созданные алгоритмом</h3>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead text-muted">Создание уникальной, динамической айдентики, которая развивается и адаптируется в зависимости от контекста и продукта.</p>
+            <p class="text-muted">Мы используем алгоритмы для генерации тысяч уникальных вариаций логотипа и сопутствующей брендовой графики, что обеспечивает исключительную гибкость и запоминаемость бренда на любых носителях.</p>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-tools text-primary me-2"></i> Что мы построили:</h6>
+            <ul class="list-unstyled text-muted project-list">
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Создание алгоритма динамического логотипа</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Разработка макетов проспектов и рекламных материалов</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Полный студийный брендинг-кейс: от концепции до продакшена</li>
+                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Слияние искусства и математики для создания бесконечной айдентики</li>
+            </ul>
+            
+            <h6 class="text-white mt-4 mb-3"><i class="fas fa-bullseye text-primary me-2"></i> Результат:</h6>
+            <p class="text-muted">Брендовая айдентика, которая не устаревает и мгновенно адаптируется под любые носители, от упаковки до цифровых проспектов.</p>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal3" aria-label="Открыть изображение Creativico в полном размере">
+                <img src="assets/img/Creativico.jpeg" alt="Скриншот динамического логотипа и проспектов Creativico" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="row mt-5 pt-5 text-center">
+        <div class="col-12" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white mb-3">
+                Один проект меняет мир.<br>
+                Второй — делает этот мир понятнее на десяти языках.
+            </h2>
+            <p class="lead text-muted mb-4">
+                Готовы создать что-то такое же значимое — красиво, умно и по-человечески?
+            </p>
+            <p class="lead text-primary mb-5">
+                Пишите. Мы уже открыли Figma и спрятали все светлые темы навсегда.
+            </p>
+            <a href="contact.html" class="btn btn-lg btn-primary rounded-pill px-5 py-3 shadow-lg">
+                <i class="fas fa-bolt me-2"></i> Обсудить ваш проект — ответим в течение часа
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-3">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/data_law_dashboard1.png" alt="Скриншот аналитической панели Data Law">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-3">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/linguadesk2.png" alt="Скриншот режима изучения LinguaDesk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-3">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/Creativico.jpeg" alt="Скриншот динамического логотипа и проспектов Creativico">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="chatbot-hover-area">
+    <button class="chatbot-toggler" aria-label="Открыть чат-бот">
+        <i class="fas fa-bolt"></i>
+        <span class="text-label">Laira</span> 
+        <i class="fas fa-times"></i>
+    </button>
+</div>
+<div class="chatbot-window">
+    <div class="chat-header">
+        <h5 class="m-0 text-white">Laira</h5> <button class="btn btn-sm btn-icon chat-close" aria-label="Закрыть чат">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="chat-body">
+        <div class="chat-message bot"> Привет! Я Laira. Спросите об услугах, цене или контактах, чтобы проверить мою минимальную функциональность. </div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" class="form-control chat-input" placeholder="Ваш вопрос...">
+        <button class="chat-send" aria-label="Отправить">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<footer class="py-5 mt-5 position-relative" style="background: rgba(18, 20, 29, 0.98); border-top: 1px solid rgba(124, 58, 237, 0.15);">
+    <div class="container">
+        <div class="row text-center text-lg-start align-items-center">
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="text-white fw-bold" style="font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.5px;">
+                    Design Lab<br>
+                    <span style="font-size: 0.95rem; color: #94a3b8; font-weight: 500;">for Data Law Project</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="text-muted small lh-lg">
+                    <div><a href="privacy.html" class="text-muted text-decoration-none hover-link">Политика конфиденциальности</a></div>
+                    <div><a href="terms.html" class="text-muted text-decoration-none hover-link">Условия предоставления услуг</a></div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 text-lg-end text-center">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                        class="btn btn-to-top rounded-pill px-4 mb-3">
+                    Наверх
+                </button>
+                
+                <div class="text-muted" style="font-size: 0.75rem; opacity: 0.7; margin-top: 1.5rem;">
+                    © 2025 Design Lab. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/chatbot.js"></script>
+</body>
+</html>
