@@ -94,8 +94,7 @@
                 <i class="fas fa-envelope fa-2x text-primary me-4 mt-1"></i>
                 <div>
                     <h4 class="h5 fw-bold text-white mb-1">Email</h4>
-                    <a href="mailto:hello@datalaw.design" class="text-primary text-decoration-none fw-bold" style="font-size: 1.1rem;">hello@datalaw.design</a>
-                    <p class="text-muted small mt-1">(или старый добрый <a href="mailto:1448884@gmail.com" class="text-secondary text-decoration-none">1448884@gmail.com</a> — тоже работает)</p>
+                    <a href="mailto:1448884@gmail.com" class="text-primary text-decoration-none fw-bold" style="font-size: 1.1rem;">1448884@gmail.com</a>
                 </div>
             </div>
 
@@ -119,7 +118,7 @@
                     Чем подробнее — тем точнее мы поймём, как можем помочь. Без презентаций на 40 слайдов. Без «давайте сначала встретимся». Просто честный разговор.
                 </p>
                 
-                <form action="#" method="POST">
+                <form id="contactForm">
                     <div class="mb-3">
                         <select class="form-select" id="subject" name="subject" required>
                             <option value="" selected disabled>Тема обращения (выберите)</option>
@@ -138,7 +137,7 @@
                     <div class="mb-4">
                         <textarea class="form-control" rows="5" placeholder="Кратко о проекте (чем больше деталей — тем лучше)" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-3 fw-bold">
+                    <button type="submit" id="submitBtn" class="btn btn-primary w-100 rounded-pill py-3 fw-bold">
                         <i class="fas fa-paper-plane me-2"></i> Отправить заявку
                     </button>
                 </form>
@@ -184,6 +183,24 @@
             <i class="fas fa-paper-plane"></i>
         </button>
     </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4" style="background: #1a1c24; border: 1px solid rgba(139, 92, 246, 0.3); color: white; border-radius: 20px;">
+      <div class="modal-body">
+        <div class="mb-4">
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: #8b5cf6;"></i>
+        </div>
+        <h3 class="fw-bold mb-3">Сообщение отправлено!</h3>
+        <p class="text-muted mb-4">
+            Спасибо, что написали. Мы уже получили уведомление (и кот тоже).<br>
+            Свяжемся с вами в ближайшее время.
+        </p>
+        <button type="button" class="btn btn-primary rounded-pill px-5" data-bs-dismiss="modal">Отлично</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer class="py-5 mt-5 position-relative" style="background: rgba(18, 20, 29, 0.98); border-top: 1px solid rgba(124, 58, 237, 0.15);">
@@ -276,5 +293,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/chatbot.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Остановить стандартную отправку
+
+                // Имитация загрузки
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Отправка...';
+                submitBtn.disabled = true;
+
+                // Задержка 1 секунда для реалистичности
+                setTimeout(function() {
+                    // Вернуть кнопку
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Очистить форму
+                    form.reset();
+                    
+                    // Показать попап
+                    successModal.show();
+                }, 1000);
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
