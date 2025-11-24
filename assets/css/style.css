@@ -11,7 +11,8 @@
     --text-main: #ffffff;
     --text-muted: #e2e8f0;
     
-    /* АКЦЕНТЫ */
+    /* АКЦЕНТЫ — НОВОЕ: ФИРМЕННЫЙ ФИОЛЕТОВО-ПУРПУРНЫЙ */
+    --accent-primary: #a855f7;
     --gradient-accent: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
     --accent-glow: rgba(124, 58, 237, 0.6);
     --accent-secondary: #f59e0b;
@@ -64,7 +65,7 @@ html {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 ::-webkit-scrollbar-thumb { 
-    background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+    background: var(--gradient-accent);
     border-radius: 6px;
     border: 2px solid var(--bg-body);
 }
@@ -233,6 +234,34 @@ html {
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* --- ПОДСВЕТКА ГАМБУРГЕР-ИКОНКИ В МОБИЛЬНОЙ ВЕРСИИ --- */
+.navbar-toggler {
+    /* Добавляем переход для плавной смены цвета и фона */
+    transition: all 0.3s var(--ease-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Обеспечиваем базовую рамку */
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+/* Стили для кнопки, когда меню открыто */
+.navbar-toggler[aria-expanded="true"] {
+    background-color: rgba(124, 58, 237, 0.2); /* Светло-фиолетовый фон */
+    border-color: #7c3aed; /* Фиолетовая рамка */
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.4); /* Небольшое свечение */
+}
+
+/* Стили для самой иконки (fas fa-bars) внутри кнопки */
+.navbar-toggler i {
+    color: var(--text-muted); /* Базовый цвет иконки */
+    transition: color 0.3s var(--ease-smooth);
+}
+
+.navbar-toggler[aria-expanded="true"] i {
+    color: #ffffff; /* Белый цвет иконки при открытом меню */
+    filter: drop-shadow(0 0 5px #7c3aed); /* Свечение на иконке */
+}
+/* --- КОНЕЦ ИЗМЕНЕНИЙ НАВИГАЦИИ --- */
+
 /* --- КНОПКИ --- */
 .btn-primary {
     background: var(--gradient-accent);
@@ -267,20 +296,22 @@ html {
 }
 
 .btn-primary:hover,
-.btn-primary:focus-visible { /* Оптимизация: :focus-visible */
+.btn-primary:focus-visible { /* ФИКС: Убеждаемся, что фон градиентный */
     transform: translateY(-3px) scale(1.02);
     box-shadow: 
         0 15px 30px rgba(124, 58, 237, 0.4),
         0 0 0 1px rgba(124, 58, 237, 0.2);
+    background: var(--gradient-accent); /* ФИКС: Гарантируем градиентный фон */
+}
+
+.btn-primary:active { /* ФИКС: Убеждаемся, что фон градиентный при нажатии */
+    transform: translateY(-1px) scale(1.01);
+    background: var(--gradient-accent); /* ФИКС: Гарантируем градиентный фон */
 }
 
 .btn-primary:hover::before,
 .btn-primary:focus-visible::before {
     left: 0;
-}
-
-.btn-primary:active {
-    transform: translateY(-1px) scale(1.01);
 }
 
 .btn-outline-light {
@@ -504,34 +535,49 @@ p.lead {
     color: #94a3b8;
 }
 
-/* --- ЧАТ-БОТ (ИЗМЕНЕНО) --- */
+/* --- ЧАТ-БОТ (ОБЪЕДИНЕННАЯ АНИМАЦИЯ: ПУЛЬС + HOVER) --- */
 
-/* Контейнер для отслеживания наведения курсора */
+/* 1. Определяем анимацию постоянного появления/исчезновения */
+@keyframes pulse-fade {
+    0% {
+        opacity: 0.3; /* Начало: Полупрозрачный */
+        transform: scale(0.95);
+        box-shadow: 
+            12px 12px 24px rgba(0, 0, 0, 0.8), 
+            -6px -6px 12px rgba(255, 255, 255, 0.05); /* Без свечения */
+    }
+    50% {
+        opacity: 1; /* Середина: Полностью виден */
+        transform: scale(1);
+        box-shadow: 
+            20px 20px 40px rgba(0, 0, 0, 0.9), 
+            -10px -10px 20px rgba(255, 255, 255, 0.08), 
+            0 0 20px rgba(124, 58, 237, 0.6); /* Максимальное свечение */
+    }
+    100% {
+        opacity: 0.3; /* Конец: Возвращается к полупрозрачному */
+        transform: scale(0.95);
+        box-shadow: 
+            12px 12px 24px rgba(0, 0, 0, 0.8), 
+            -6px -6px 12px rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* 2. Контейнер, на котором висит иконка */
 .chatbot-hover-area {
     position: fixed;
     bottom: 0;
     right: 0;
-    /* Увеличенная область для срабатывания */
     width: 150px; 
     height: 150px; 
     z-index: 1000;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /* Начальное едва заметное свечение */
-    box-shadow: 
-        0 0 10px rgba(124, 58, 237, 0.05); 
-    /* !!! ИЗМЕНЕНИЕ: Исчезает за 0.6 секунды */
-    transition: box-shadow 0.6s var(--ease-smooth);
     pointer-events: none; 
 }
 
-.chatbot-hover-area:hover {
-    /* Увеличение свечения при наведении */
-    box-shadow: 
-        0 0 20px rgba(124, 58, 237, 0.4);
-}
-
+/* 3. Стиль самой иконки с анимацией */
 .chatbot-toggler {
     position: absolute; 
     bottom: 35px;
@@ -541,52 +587,42 @@ p.lead {
     background: #12141d; 
     border-radius: 50%;
     display: flex;
-    flex-direction: column; /* Для размещения молнии и текста */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 1001;
     border: none;
     pointer-events: auto; 
-    gap: 2px; /* Расстояние между молнией и текстом */
+    gap: 2px;
     
-    /* Начальное состояние: невидимый и уменьшенный */
-    opacity: 0;
-    transform: scale(0.5);
+    /* Базовый переход для hover и show */
+    transition: all 0.4s var(--ease-smooth); 
     
-    /* !!! ИЗМЕНЕНИЕ: Плавная материализация (0.6s) */
-    transition: 
-        opacity 0.6s var(--ease-smooth),
-        transform 0.6s var(--ease-bounce),
-        box-shadow 0.4s var(--ease-smooth);
-    
-    /* Эффект матового дорогого круга */
-    box-shadow: 
-        12px 12px 24px rgba(0, 0, 0, 0.8),
-        -6px -6px 12px rgba(255, 255, 255, 0.05),
-        inset 1px 1px 3px rgba(255, 255, 255, 0.02);
+    /* !!! ПУЛЬСАЦИЯ: 3 секунды, плавно, бесконечно */
+    animation: pulse-fade 3s var(--ease-smooth) infinite alternate;
 }
 
-/* Состояние при наведении на контейнер */
-.chatbot-hover-area:hover .chatbot-toggler {
-    opacity: 1;
-    transform: scale(1); /* Плавная материализация */
+/* 4. СОСТОЯНИЕ HOVER: Приостановка пульсации и сильный эффект */
+.chatbot-toggler:hover {
+    animation-play-state: paused; /* Останавливаем пульсацию */
+    opacity: 1; /* Полная видимость */
+    transform: scale(1.05); /* Легкое увеличение */
     box-shadow: 
         20px 20px 40px rgba(0, 0, 0, 0.9),
         -10px -10px 20px rgba(255, 255, 255, 0.08),
-        0 0 20px rgba(124, 58, 237, 0.4); /* Свечение */
+        0 0 30px rgba(124, 58, 237, 0.8); /* Сильное свечение */
 }
 
 /* НОВЫЕ СТИЛИ ДЛЯ МОЛНИИ И ТЕКСТА */
 .chatbot-toggler i.fa-bolt {
     font-size: 2.2rem;
-    /* Красивый градиент молнии */
     background: linear-gradient(45deg, #FFD700 0%, #FFA500 100%); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     transition: all 0.4s ease;
-    transform: translateY(0); /* Центровка по вертикали */
+    transform: translateY(0); 
 }
 
 .chatbot-toggler .text-label {
@@ -612,8 +648,15 @@ p.lead {
 
 /* Состояние: Чат открыт (окно имеет класс show) */
 .chatbot-window.show ~ .chatbot-hover-area .chatbot-toggler {
-    transform: scale(1) rotate(0deg) !important; 
+    animation: none; /* !!! ОТКЛЮЧАЕМ пульсацию */
+    animation-play-state: running; /* Сброс play state */
     opacity: 1 !important; 
+    transform: scale(1) rotate(0deg) !important; 
+    /* Стабильная тень для открытого состояния */
+    box-shadow: 
+        15px 15px 30px rgba(0, 0, 0, 0.9),
+        -8px -8px 15px rgba(255, 255, 255, 0.05),
+        0 0 15px rgba(124, 58, 237, 0.4); 
 }
 
 /* Скрываем молнию и текст при открытии чата */
@@ -770,8 +813,6 @@ p.lead {
     border-bottom: none;
 }
 
-/* Удален неполный или конфликтующий стиль иконки */
-
 /* НОВОЕ: Стиль для индикатора печати */
 .typing-indicator {
     display: flex;
@@ -821,6 +862,7 @@ p.lead {
         font-size: 2.5rem;
     }
 }
+
 /* --- АНИМАЦИИ ЗАГРУЗКИ --- */
 @keyframes fadeInUp {
     from {
@@ -840,4 +882,43 @@ p.lead {
     .nav-link, .btn, .module-card {
         cursor: pointer;
     }
+}
+
+/* ─────────────── НОВЫЕ ПРАВКИ: ФИРМЕННЫЙ ФИОЛЕТ ДЛЯ ВСЕГО САЙТА ─────────────── */
+/* Переопределяем Bootstrap primary на наш фиолетовый (только для акцентов) */
+.text-primary,
+h3.text-primary,
+h5.text-primary,
+i.text-primary,
+.project-list i.fa-arrow-right {
+    color: var(--accent-primary) !important;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Градиент для заголовков на cases.html */
+.gradient-text {
+    background: var(--gradient-accent) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Стрелки в списках кейсов */
+.project-list i {
+    color: var(--accent-primary) !important;
+}
+
+/* Границы изображений на cases.html */
+.case-image {
+    border-color: var(--accent-border) !important;
+}
+
+/* Ссылки */
+a:not(.btn):not(.nav-link) {
+    color: var(--accent-primary);
+}
+a:not(.btn):not(.nav-link):hover {
+    color: #c084fc;
+    text-decoration: underline;
 }
