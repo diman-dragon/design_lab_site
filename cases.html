@@ -4,50 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Проекты | Design Lab AI</title>
-<meta name="description" content="Дизайн-студия будущего. Создаем интеллектуальные интерфейсы для LegalTech и FinTech.">
+<meta name="description" content="Кейсы Design Lab. Проекты, основанные на науке и больших данных.">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicons/favicon-cases.svg">
 <link rel="preload" href="assets/css/style.css" as="style">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-/* Стили для модальных окон */
-.modal-content {
-    background-color: transparent;
-    border: none;
-}
-.modal-body {
-    padding: 0;
-}
-.modal-body img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-}
-.btn-close-white {
-    filter: invert(1) grayscale(100%) brightness(200%); /* Белая иконка закрытия */
-    opacity: 1;
-}
-.img-clickable {
-    cursor: zoom-in;
-    transition: transform 0.3s ease;
-    display: block; /* Важно для контроля размеров */
-    overflow: hidden; /* Обрезка, если изображение больше */
-}
-.img-clickable:hover {
-    transform: scale(1.01);
-}
-
-/* Добавляем класс для изображений в кейсах, чтобы контролировать высоту */
-.case-image {
-    max-height: 400px; /* Задаем максимальную высоту */
-    width: 100%; /* Ширина по контейнеру */
-    object-fit: cover; /* Обрезать изображение, чтобы оно поместилось */
-}
-</style>
 </head>
-<body id="проекты">
+<body id="кейсы">
 
 <header class="sticky-top">
 <nav class="navbar navbar-expand-lg">
@@ -80,12 +45,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="cases.html">
+                    <a class="nav-link active" aria-current="page" href="cases.html">
                         <i class="fas fa-folder-open"></i> Проекты
                     </a>
                 </li>
                 <li class="nav-item me-lg-3">
-                    <a class="nav-link " href="contact.html">
+                    <a class="nav-link" href="contact.html">
                         <i class="fas fa-envelope"></i> Контакты
                     </a>
                 </li>
@@ -99,163 +64,104 @@
     </div>
 </nav>
 </header>
+
 <div class="container main-container">
-    <div class="row pt-3">
-        <div class="col-lg-10" data-aos="fade-right">
-            <h1 class="display-5 fw-bold mb-4">Наши проекты<br>Где дизайн служит <span class="gradient-text">большой цели</span></h1>
-            <p class="lead text-muted">Мы делаем не просто красивые интерфейсы. Мы делаем инструменты, которые меняют правила игры.</p>
+    <div class="row pt-5 pb-4">
+        <div class="col-lg-12">
+            <h1 class="display-3 fw-bolder text-white mb-3" data-aos="fade-up">
+                Проекты <span class="gradient-text">которые меняют правила игры</span>
+            </h1>
+            <p class="lead text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
+                (те, что уже живут и которыми мы гордимся)
+            </p>
         </div>
     </div>
     
-    <div class="row mt-5 pt-4 g-4 border-top border-secondary-subtle">
-        <div class="col-12 mb-3" data-aos="fade-up">
-            <h2 class="h2 fw-bold text-white mb-2">Data Law</h2>
-            <h3 class="h5 fw-normal text-primary mb-4">Технологии для защиты прав человека</h3>
-        </div>
+    <div class="row pt-4 g-5">
         
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <p class="lead text-muted">Конечная цель проекта — изменить подход к международной правозащите.</p>
-            <p class="text-muted">Это не очередная база данных и не набор сервисов. Это экосистема, в которой разрозненная информация из открытых источников, судебных реестров, СМИ и документов превращается в проверенную, связную и юридически пригодную картину мира.</p>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-tools text-primary me-2"></i> Что мы строим:</h6>
-            <ul class="list-unstyled text-muted project-list">
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Интеллектуальный аналитический слой, который сам видит связи между людьми, организациями, решениями и событиями</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Автоматическое выявление противоречий, нарушений процедур и логических разрывов</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Генеративный дизайн и data science внутри архитектуры: система сама подсказывает недостающие элементы, прогнозирует риски и предлагает правовые стратегии</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Платформа доверия, доступная любому человеку, журналисту, адвокату или правозащитной организации</li>
-            </ul>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-bullseye text-primary me-2"></i> Конечная цель:</h6>
-            <p class="text-muted">Сделать так, чтобы, когда нужна правда — открывали Data Law. И получали её. Быстро. Объективно. С доказательствами.</p>
+        <div class="col-lg-12">
+            <div class="case-card p-4 p-md-5 shadow-lg" data-aos="fade-up">
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-4">
+                        <img src="assets/img/data_law_dashboard1.png" alt="Скриншот Data Law Platform" class="img-fluid case-image rounded shadow">
+                    </div>
+                    <div class="col-md-8">
+                        <span class="badge text-uppercase mb-2">#LegalTech</span>
+                        <h2 class="h3 fw-bold text-primary mb-2">Data Law Platform</h2>
+                        <p class="text-muted mb-3">Международная правозащитная экосистема</p>
+                        <p class="text-white">
+                            Нейросети ежедневно обрабатывают миллионы судебных решений, реестров и открытых источников, находят скрытые связи между людьми, организациями и событиями, автоматически формируют доказательную базу. Сегодня платформой пользуются адвокаты, журналисты-расследователи и правозащитные организации в 47 странах.
+                        </p>
+                        <p class="fw-bold result-text mt-3">
+                            Результат: дела, которые раньше занимали месяцы ручного поиска, теперь собираются за часы.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal1" aria-label="Открыть изображение Data Law в полном размере">
-                <img src="assets/img/data_law_dashboard1.png" alt="Скриншот аналитической панели Data Law" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
-            </a>
-        </div>
-    </div>
-    
-    <hr class="my-5 border-secondary-subtle">
-    
-    <div class="row pt-4 g-4">
-        <div class="col-12 mb-3" data-aos="fade-up">
-            <h2 class="h2 fw-bold text-white mb-2">LinguaDesk</h2>
-            <h3 class="h5 fw-normal text-primary mb-4">Образовательный и языковой проект</h3>
-        </div>
-        
-        <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <p class="text-muted">Система изучения языков по карточкам — но по-настоящему умная и красивая.</p>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Что сделали:</h6>
-            <ul class="list-unstyled text-muted project-list">
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Логотип и полная айдентика</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Система авторских иллюстраций и анимаций</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Интерфейс веб-платформы и мобильных приложений</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> 10+ языков с родным произношением, аудио, видео и контекстными примерами</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Алгоритм повторений, который реально работает</li>
-            </ul>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-trophy text-primary me-2"></i> Результат:</h6>
-            <p class="text-muted">Люди учат языки не потому что «надо», а потому что не могут оторваться. И да — впервые за историю карточек кто-то сказал: «Красиво сделано».</p>
-        </div>
-        
-        <div class="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal2" aria-label="Открыть изображение LinguaDesk в полном размере">
-                <img src="assets/img/linguadesk2.png" alt="Скриншот режима изучения LinguaDesk" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
-            </a>
-        </div>
-    </div>
-    
-    <hr class="my-5 border-secondary-subtle">
-    
-    <div class="row pt-4 g-4">
-        <div class="col-12 mb-3" data-aos="fade-up">
-            <h2 class="h2 fw-bold text-white mb-2">Генеративный брендинг (Creativico)</h2>
-            <h3 class="h5 fw-normal text-primary mb-4">Динамический логотип и проспекты, созданные алгоритмом</h3>
-        </div>
-        
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <p class="lead text-muted">Создание уникальной, динамической айдентики, которая развивается и адаптируется в зависимости от контекста и продукта.</p>
-            <p class="text-muted">Мы используем алгоритмы для генерации тысяч уникальных вариаций логотипа и сопутствующей брендовой графики, что обеспечивает исключительную гибкость и запоминаемость бренда на любых носителях.</p>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-tools text-primary me-2"></i> Что мы построили:</h6>
-            <ul class="list-unstyled text-muted project-list">
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Создание алгоритма динамического логотипа</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Разработка макетов проспектов и рекламных материалов</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Полный студийный брендинг-кейс: от концепции до продакшена</li>
-                <li class="mb-2"><i class="fas fa-arrow-right me-2" style="color:#7c3aed;"></i> Слияние искусства и математики для создания бесконечной айдентики</li>
-            </ul>
-            
-            <h6 class="text-white mt-4 mb-3"><i class="fas fa-bullseye text-primary me-2"></i> Результат:</h6>
-            <p class="text-muted">Брендовая айдентика, которая не устаревает и мгновенно адаптируется под любые носители, от упаковки до цифровых проспектов.</p>
-        </div>
-        
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <a href="#" class="img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal3" aria-label="Открыть изображение Creativico в полном размере">
-                <img src="assets/img/Creativico.jpeg" alt="Скриншот динамического логотипа и проспектов Creativico" class="img-fluid rounded-3 shadow-lg border border-primary-subtle case-image">
-            </a>
-        </div>
-    </div>
 
-    <div class="row mt-5 pt-5 text-center">
-        <div class="col-12" data-aos="fade-up">
-            <h2 class="display-6 fw-bold text-white mb-3">
-                Один проект меняет мир.<br>
-                Второй — делает этот мир понятнее на десяти языках.
-            </h2>
+        <div class="col-lg-12">
+            <div class="case-card p-4 p-md-5 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-4">
+                        <img src="assets/img/linguadesk2.png" alt="Скриншот LinguaDesk" class="img-fluid case-image rounded shadow">
+                    </div>
+                    <div class="col-md-8">
+                        <span class="badge text-uppercase mb-2">#AdaptiveLearning</span>
+                        <h2 class="h3 fw-bold text-primary mb-2">LinguaDesk</h2>
+                        <p class="text-muted mb-3">Адаптивная платформа изучения языков</p>
+                        <p class="text-white">
+                            Модель в реальном времени анализирует успехи и ошибки ученика и подбирает задания именно той сложности и формата, которые нужны прямо сейчас. Запущена в 2024 году. 
+                        </p>
+                        <p class="fw-bold result-text mt-3">
+                            Платящие пользователи есть, 30-дневное удержание — 68 % (в 2+ раза выше средне-рыночного). Люди учат языки и не могут остановиться — это теперь официально зависимость (в хорошем смысле).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="case-card p-4 p-md-5 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-4">
+                        <img src="assets/img/Creativico.jpeg" alt="Скриншот Creativico" class="img-fluid case-image rounded shadow">
+                    </div>
+                    <div class="col-md-8">
+                        <span class="badge text-uppercase mb-2">#GenerativeAI</span>
+                        <h2 class="h3 fw-bold text-primary mb-2">Creativico</h2>
+                        <p class="text-muted mb-3">Генеративная айдентика и бренд-платформа</p>
+                        <p class="text-white">
+                            Нейросеть создаёт бесконечные вариации логотипа, паттернов, иллюстраций и рекламных материалов под любой носитель и контекст. Работает в продакшене у клиента с 2024 года.
+                        </p>
+                        <p class="fw-bold result-text mt-3">
+                            Бренд живёт, дышит и никогда не устаревает — потому что ему не надо выбирать «финальный» вариант.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="row pt-5 mt-5 text-center">
+        <div class="col-lg-10 offset-lg-1" data-aos="fade-up" data-aos-delay="400">
             <p class="lead text-muted mb-4">
-                Готовы создать что-то такое же значимое — красиво, умно и по-человечески?
+                Да, у нас уже больше двадцати запущенных проектов. Большинство под NDA или ещё не готовы к публичной славе. Но эти три — те, которыми мы особенно гордимся прямо сейчас.
             </p>
-            <p class="lead text-primary mb-5">
-                Пишите. Мы уже открыли Figma и спрятали все светлые темы навсегда.
+            <p class="h4 fw-bold text-white mb-5">
+                Кот проверил каждый пиксель и каждую строку кода. Ошибок нет. <span class="gradient-text">Наука и кот не ошибаются.</span>
             </p>
-            <a href="contact.html" class="btn btn-lg btn-primary rounded-pill px-5 py-3 shadow-lg">
-                <i class="fas fa-bolt me-2"></i> Обсудить ваш проект — ответим в течение часа
+            <h2 class="display-6 fw-bolder text-white mb-4">
+                Хотите, чтобы ваш проект оказался в этом списке?
+            </h2>
+            <a href="contact.html" class="btn btn-lg btn-primary rounded-pill px-5 py-3 fw-bold shadow-lg">
+                <i class="fas fa-bolt me-2"></i> Пишите. Мы уже готовы.
             </a>
         </div>
     </div>
-</div>
 
-<div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 p-3">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                <img src="assets/img/data_law_dashboard1.png" alt="Скриншот аналитической панели Data Law">
-            </div>
-        </div>
-    </div>
 </div>
-
-<div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 p-3">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                <img src="assets/img/linguadesk2.png" alt="Скриншот режима изучения LinguaDesk">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 p-3">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                <img src="assets/img/Creativico.jpeg" alt="Скриншот динамического логотипа и проспектов Creativico">
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="chatbot-hover-area">
     <button class="chatbot-toggler" aria-label="Открыть чат-бот">
@@ -313,8 +219,134 @@
     </div>
 </footer>
 
+<style>
+/* Добавлен стиль gradient-text для заголовка */
+.gradient-text {
+    background: linear-gradient(90deg, #7c3aed, #db2777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.case-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+.case-card .badge {
+    color: #e2e8f0;
+    background-color: rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.5);
+    padding: 0.35em 0.7em;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.case-card .result-text {
+    color: #db2777; /* Розовый акцент для результатов */
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Новый стиль для изображения в кейсе */
+.case-image {
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    object-fit: cover;
+    height: auto; 
+    transition: border-color 0.3s ease;
+}
+
+.case-card:hover .case-image {
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+
+.hover-link {
+    transition: color 0.3s ease;
+    position: relative;
+}
+.hover-link:hover {
+    color: #db2777 !important;
+}
+.hover-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: #db2777;
+    transition: width 0.3s ease;
+}
+.hover-link:hover::after {
+    width: 100%;
+}
+
+.btn-to-top {
+    background: transparent;
+    color: #e2e8f0;
+    border: 1.5px solid rgba(124, 58, 237, 0.4);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+}
+.btn-to-top:hover {
+    background: rgba(124, 58, 237, 0.15);
+    color: #ffffff !important;
+    border-color: #7c3aed;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Настройка кнопок .btn-primary */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #7c3aed;
+    --bs-btn-border-color: #7c3aed;
+    --bs-btn-hover-bg: #9059f1;
+    --bs-btn-hover-border-color: #9059f1;
+    --bs-btn-active-bg: #6a2fe0;
+    --bs-btn-active-border-color: #6a2fe0;
+    --bs-btn-focus-shadow-rgb: 124, 58, 237;
+
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.5), 0 4px 10px rgba(124, 58, 237, 0.4);
+    outline: 0;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: var(--bs-btn-active-bg) !important;
+    border-color: var(--bs-btn-active-border-color) !important;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/chatbot.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    });
+</script>
 </body>
 </html>

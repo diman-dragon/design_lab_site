@@ -68,11 +68,11 @@
 <div class="container main-container">
     <div class="row pt-5 pb-4">
         <div class="col-lg-12">
-            <h1 class="display-1 fw-bolder text-white mb-4" data-aos="fade-up">
-                Давайте знакомиться <span class="gradient-text">и делать крутые вещи вместе</span>
+            <h1 class="display-3 fw-bolder text-white mb-4" data-aos="fade-up">
+                Давайте сделаем что-то, от чего у пользователей перехватит дыхание, <span class="gradient-text">а у конкурентов — отвалится челюсть.</span>
             </h1>
             <p class="lead text-muted mb-5" data-aos="fade-up" data-aos-delay="200">
-                Никаких менеджеров по продажам и «мы вам перезвоним». Пишите — отвечает тот, кто будет делать ваш проект.
+                Никаких менеджеров, секретарей и «мы вам перезвоним». Пишете — отвечает тот, кто будет лично делать ваш проект: анализировать данные, строить модели и рисовать каждый пиксель. Иногда даже кот проверяет (молчание = одобрение).
             </p>
         </div>
     </div>
@@ -84,9 +84,9 @@
             <div class="d-flex align-items-start mb-5" data-aos="fade-up" data-aos-delay="100">
                 <i class="fab fa-telegram-plane fa-2x text-primary me-4 mt-1"></i>
                 <div>
-                    <h4 class="h5 fw-bold text-white mb-1">Telegram — самый быстрый способ</h4>
+                    <h4 class="h5 fw-bold text-white mb-1">Telegram — самый быстрый путь</h4>
                     <a href="https://t.me/datalaw_rights" class="text-primary text-decoration-none fw-bold" style="font-size: 1.1rem;">@datalaw_rights</a>
-                    <p class="text-muted small mt-1">(отвечаем в течение часа, даже ночью)</p>
+                    <p class="text-muted small mt-1">(отвечаем в течение часа, даже если сейчас 3:17 ночи по Москве)</p>
                 </div>
             </div>
 
@@ -95,6 +95,7 @@
                 <div>
                     <h4 class="h5 fw-bold text-white mb-1">Email</h4>
                     <a href="mailto:1448884@gmail.com" class="text-primary text-decoration-none fw-bold" style="font-size: 1.1rem;">1448884@gmail.com</a>
+                    <p class="text-muted small mt-1">(письма читаем так же быстро, просто Telegram удобнее)</p>
                 </div>
             </div>
 
@@ -103,9 +104,9 @@
                 <div>
                     <h4 class="h5 fw-bold text-white mb-3">Где мы находимся</h4>
                     <p class="text-muted">
-                        В цифровом пространстве. Удалённо. По всему миру.<br>
-                        Один дизайнер пьёт кофе в Москве, второй — в Ереване, третий — в лесу, но с хорошим интернетом.<br>
-                        Главное — Figma открыта, светлые темы запрещены, а кофе всегда горячий.
+                        В цифровом пространстве и в разных часовых поясах.<br>
+                        Один из нас пьёт кофе в Москве, другой — в Ереване, третий — в лесу с хорошим интернетом.<br>
+                        Главное — мы всегда онлайн, когда нужен ваш проект.
                     </p>
                 </div>
             </div>
@@ -115,7 +116,7 @@
             <div class="module-card p-4 p-md-5 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="h3 fw-bold text-white mb-3">Расскажите о проекте</h2>
                 <p class="text-muted mb-4">
-                    Чем подробнее — тем точнее мы поймём, как можем помочь. Без презентаций на 40 слайдов. Без «давайте сначала встретимся». Просто честный разговор.
+                    Расскажите о задаче — чем подробнее, тем точнее будет наше предложение. Не надо презентаций на 40 слайдов. Просто честно: что болит и чего хотите достичь.
                 </p>
                 
                 <form id="contactForm">
@@ -138,7 +139,7 @@
                         <textarea class="form-control" rows="5" placeholder="Кратко о проекте (чем больше деталей — тем лучше)" required></textarea>
                     </div>
                     <button type="submit" id="submitBtn" class="btn btn-primary w-100 rounded-pill py-3 fw-bold">
-                        <i class="fas fa-paper-plane me-2"></i> Отправить заявку
+                        <i class="fas fa-paper-plane me-2"></i> Отправить — и начнём
                     </button>
                 </form>
             </div>
@@ -148,13 +149,11 @@
     <div class="row pt-5 mt-5 text-center">
         <div class="col-lg-10 offset-lg-1" data-aos="fade-up" data-aos-delay="400">
             <h2 class="display-5 fw-bolder text-white mb-4">
-                Мы не продаём дизайн.
-                <span class="gradient-text">Мы помогаем создавать продукты, которыми не стыдно пользоваться и которые реально решают задачи.</span>
+                Мы не продаём дизайн и не продаём data science. <span class="gradient-text">Мы создаём продукты, в которых наука и красота работают вместе — и ошибок не бывает.</span>
             </h2>
             <p class="lead text-muted mt-5">
-                Пишите.<br>
-                Ждём вашего сообщения. Figma уже открыта.<br>
-                Светлые темы — по-прежнему спрятаны.
+                Пишите прямо сейчас.<br>
+                Кот уже занял место у монитора и ждёт ваш проект.
             </p>
         </div>
     </div>
@@ -305,7 +304,8 @@
                 e.preventDefault(); // Остановить стандартную отправку
 
                 // Имитация загрузки
-                const originalText = submitBtn.innerHTML;
+                // Измененная логика для корректного восстановления текста с иконкой
+                const originalText = '<i class="fas fa-paper-plane me-2"></i> Отправить — и начнём';
                 submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Отправка...';
                 submitBtn.disabled = true;
 
